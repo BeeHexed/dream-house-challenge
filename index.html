@@ -3,26 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>Dream Home</title>
     <style>
       body {
         background-color: #799eaf;
       }
       h1 {
-        color: rgb(198, 64, 92);
+        color: #92374d;
         text-align: center;
         font-size: 45px;
+        font-family: "Mali", cursive;
+        font-weight: 400;
+        font-style: normal;
       }
 
       h2 {
-        color: #f6cd49;
+        color: #fffbdb;
+      }
+
+      p {
+        color: #002a32;
       }
 
       .strokeme {
         color: rgb(198, 64, 92);
         background-color: #799eaf;
-        text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
-          1px 1px 0 #ffffff;
+        text-shadow: -1px -1px 0 rgba(235, 166, 169, 0.749), 1px -1px 0 #fffbdb,
+          -1px 1px 0 rgba(235, 166, 169, 0.749), 1px 1px 0 #fffbdb;
+        font-family: "Mali", cursive;
+        font-weight: 500;
+        font-style: italic;
+        font-size: 69px;
       }
 
       .office {
@@ -34,7 +51,12 @@
         max-width: 35%;
         max-height: 35%;
         border-radius: 70% 70% 60% 60%;
-        border: white solid 3px;
+        border: #eba6a9bf, solid 3px;
+        display: block;
+        margin: 0 auto;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
       }
 
       footer {
@@ -46,12 +68,13 @@
   <body>
     <h1><div class="strokeme">My Dream Home</div></h1>
     <!--Do I want these images on a carousel?  -->
-    <h2>Exterior</h2>
+
     <img
       src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/094/original/cottage.jpg?1742738033"
       alt=""
       class="exterior"
     />
+    <h2>Exterior</h2>
     <p>placeholder</p>
     <br />
     <h2>Office</h2>
