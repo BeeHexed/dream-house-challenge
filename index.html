@@ -13,6 +13,9 @@
     <style>
       body {
         background-color: #799eaf;
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/912/original/background1.png?1743450168");
+        background-repeat: repeat-y;
+        background-size: 100% 40%;
       }
       h1 {
         color: #92374d;
@@ -43,16 +46,17 @@
       }
 
       .images {
-        width: 300px;
-        height: 300px;
+        max-width: 300px;
+        max-height: 300px;
+        border-radius: 15px;
       }
 
       .exterior {
-        max-width: 35%;
-        max-height: 35%;
+        max-width: 40%;
+        max-height: 40%;
         border-radius: 70% 70% 53% 53%;
         border: #eba6a9bf, solid 3px;
-        display: block;
+        display: flex;
         margin: 0 auto;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
           rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
@@ -69,27 +73,39 @@
     <h1><div class="strokeme">My Dream Home</div></h1>
     <!--Do I want these images on a carousel?  -->
 
+    <br />
+
     <img
       src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/094/original/cottage.jpg?1742738033"
       alt="#"
       class="exterior"
     />
-    <h2>Exterior</h2>
-    <p>placeholder</p>
-    <br />
 
     <h2>Views</h2>
     <p>placeholder</p>
+
     <img
       src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/089/original/England-Coast-Path.jpg?1742737946"
       class="images"
+      class="imageTwo"
       alt="#"
     />
-    <img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/088/original/pink-coast.jpg?1742737930"
-      class="images"
-      alt="#"
-    />
+
+    <div class="container">
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/088/original/pink-coast.jpg?1742737930"
+        class="images"
+        class="imageThree"
+        alt="#"
+      />
+
+      <h2>Garden</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/706/original/garden2.jpeg?1743330960"
+        class="images"
+        alt="#"
+      />
+    </div>
 
     <h2>Office</h2>
     <p>placeholder</p>
@@ -105,13 +121,6 @@
     />
 
     <br />
-
-    <h2>Garden</h2>
-    <img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/706/original/garden2.jpeg?1743330960"
-      class="images"
-      alt="#"
-    />
 
     <br />
 
@@ -129,14 +138,6 @@
       alt="A bedroom with a comfortable bed and a modern chandelier."
     />
     <br />
-
-    <h2>Views</h2>
-    <p>placeholder</p>
-    <img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/089/original/England-Coast-Path.jpg?1742737946"
-      class="images"
-      alt="#"
-    />
 
     <h2>Kitchen</h2>
     <p>placeholder</p>
