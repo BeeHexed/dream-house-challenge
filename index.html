@@ -30,10 +30,6 @@
         color: #fffbdb;
       }
 
-      p {
-        color: #002a32;
-      }
-
       .strokeme {
         color: rgb(198, 64, 92);
         text-shadow: -1px -1px 0 rgba(235, 166, 169, 0.749), 1px -1px 0 #fffbdb,
@@ -62,7 +58,27 @@
           rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
           rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
       }
+
       .slideshow-container {
+        height: 600px;
+        margin: 0;
+        display: grid;
+        grid-template-rows: 500px 100px;
+        grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+        align-items: center;
+        justify-items: center;
+      }
+
+      .item img {
+        width: 100px;
+        height: 100px;
+        margin-top: 15px;
+      }
+
+      .text {
+        margin-bottom: 2px;
+        margin-top: 2px;
+        color: white;
       }
 
       .images {
@@ -71,8 +87,117 @@
         border-radius: 15px;
       }
 
-      .mySlides {
-        display: none;
+      main#carousel {
+        grid-row: 1 / 2;
+        grid-column: 1 / 7;
+        width: 100vw;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transform-style: preserve-3d;
+        perspective: 600px;
+        --items: 7;
+        --middle: 3;
+        --position: 1;
+        pointer-events: painted;
+      }
+
+      div.item {
+        text-align: center;
+        padding: 100px;
+        border: 1px solid #1d546d;
+        border-radius: 20px;
+        width: 300px;
+        height: 250px;
+        background-color: rgba(121, 158, 175, 0.7);
+        --r: calc(var(--position) - var(--offset));
+        --abs: max(calc(var(--r) * -1), var(--r));
+        transition: all 0.25s linear;
+        transform: rotateY(calc(-10deg * var(--r)))
+          translateX(calc(-300px * var(--r)));
+        z-index: calc((var(--position) - var(--abs)));
+      }
+
+      div.item:nth-of-type(1) {
+        --offset: 1;
+      }
+      div.item:nth-of-type(2) {
+        --offset: 2;
+      }
+      div.item:nth-of-type(3) {
+        --offset: 3;
+      }
+      div.item:nth-of-type(4) {
+        --offset: 4;
+      }
+      div.item:nth-of-type(5) {
+        --offset: 5;
+      }
+      div.item:nth-of-type(6) {
+        --offset: 6;
+      }
+      div.item:nth-of-type(7) {
+        --offset: 7;
+      }
+
+      input:nth-of-type(1) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+      }
+
+      input:nth-of-type(1):checked ~ main#carousel {
+        --position: 1;
+      }
+
+      input:nth-of-type(2) {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+      }
+      input:nth-of-type(2):checked ~ main#carousel {
+        --position: 2;
+      }
+
+      input:nth-of-type(3) {
+        grid-column: 4 /5;
+        grid-row: 2 / 3;
+      }
+      input:nth-of-type(3):checked ~ main#carousel {
+        --position: 3;
+      }
+
+      input:nth-of-type(4) {
+        grid-column: 5 / 6;
+        grid-row: 2 / 3;
+      }
+      input:nth-of-type(4):checked ~ main#carousel {
+        --position: 4;
+      }
+
+      input:nth-of-type(5) {
+        grid-column: 6 / 7;
+        grid-row: 2 / 3;
+      }
+      input:nth-of-type(5):checked ~ main#carousel {
+        --position: 5;
+      }
+
+      input:nth-of-type(6) {
+        grid-column: 7 / 8;
+        grid-row: 2 / 3;
+      }
+
+      input:nth-of-type(6):checked ~ main#carousel {
+        --position: 6;
+      }
+      input:nth-of-type(7) {
+        grid-column: 8 / 9;
+        grid-row: 2 / 3;
+      }
+
+      input:nth-of-type(7):checked ~ main#carousel {
+        --position: 7;
       }
 
       footer {
@@ -103,7 +228,7 @@
       <input type="radio" name="position" />
       <input type="radio" name="position" />
       <input type="radio" name="position" />
-      <input type="radio" name="position" />
+
       <main id="carousel">
         <div class="item">
           <img
@@ -113,26 +238,13 @@
             alt="#"
             style="width: 25%"
           />
-          <h2>Views</h2>
-          <p class="text">
-            I shall always feel drawn to the sea. I dream of being able to step
-            outside my door and watch the crashing waves of the sea during a
-            storm.
-          </p>
-        </div>
 
-        <div class="item">
           <h2>Garden</h2>
           <p class="text">
             The garden is full of herbs, vegetables, fruits, and colourful
             blooms. There is a covered seating area where I can drink coffee
             when it is raining.
           </p>
-          <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/706/original/garden2.jpeg?1743330960"
-            class="images"
-            alt="#"
-          />
         </div>
 
         <div class="item">
@@ -183,7 +295,7 @@
             class="images"
             alt="#"
           />
-          <h2>Sunroom,</h2>
+          <h2>Sunroom</h2>
           <p class="text">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam
             obcaecati laborum dolor eveniet non eligendi, consequuntur voluptate
