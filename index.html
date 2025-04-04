@@ -13,9 +13,9 @@
     <style>
       body {
         background-color: #799eaf;
-        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/912/original/background1.png?1743450168");
-        background-repeat: repeat-y;
-        background-size: 100% 40%;
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/162/209/original/background1.png?1743774383");
+        background-repeat: repeat;
+        background-size: 100%;
       }
       h1 {
         color: #92374d;
@@ -36,7 +36,6 @@
 
       .strokeme {
         color: rgb(198, 64, 92);
-        background-color: #799eaf;
         text-shadow: -1px -1px 0 rgba(235, 166, 169, 0.749), 1px -1px 0 #fffbdb,
           -1px 1px 0 rgba(235, 166, 169, 0.749), 1px 1px 0 #fffbdb;
         font-family: "Mali", cursive;
@@ -45,15 +44,16 @@
         font-size: 69px;
       }
 
-      .images {
-        max-width: 300px;
-        max-height: 300px;
-        border-radius: 15px;
+      .box {
+        background-color: #799eaf;
+        opacity: 90%;
+        max-width: 60%;
+        margin: 0 auto;
       }
 
       .exterior {
-        max-width: 40%;
-        max-height: 40%;
+        max-width: 500px;
+        max-height: 500px;
         border-radius: 70% 70% 53% 53%;
         border: #eba6a9bf, solid 3px;
         display: flex;
@@ -61,6 +61,21 @@
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
           rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
           rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      }
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+
+      .images {
+        width: 300px;
+        height: 300px;
+        border-radius: 15px;
+      }
+
+      .mySlides {
+        display: none;
       }
 
       footer {
@@ -70,28 +85,73 @@
   </head>
 
   <body>
-    <h1><div class="strokeme">My Dream Home</div></h1>
-    <!--Do I want these images on a carousel?  -->
-
-    <br />
-
+    <div class="box">
+      <h1>
+        <div class="strokeme">My Dream Home</div>
+      </h1>
+    </div>
+    <!--Main image do not add to carousel  -->
     <img
       src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/094/original/cottage.jpg?1742738033"
-      alt="#"
+      alt="A cottage in the middle of the woods. It is peaceful. No neighbours are around."
       class="exterior"
     />
 
-    <h2>Views</h2>
-    <p>placeholder</p>
+    <br />
 
-    <img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/089/original/England-Coast-Path.jpg?1742737946"
-      class="images"
-      class="imageTwo"
-      alt="#"
-    />
+    <input type="radio" name="position" />
+    <input type="radio" name="position" />
+    <input type="radio" name="position" checked />
+    <input type="radio" name="position" />
+    <input type="radio" name="position" />
+    <main id="carousel">
+      <div class="item">
+        <img src="" alt="" />
+        <h2 class="images"></h2>
+        <p class="text"></p>
+      </div>
 
-    <div class="container">
+      <div class="item">
+        <img src="" alt="" />
+        <h2 class="images"></h2>
+        <p class="text"></p>
+      </div>
+
+      <div class="item">
+        <img src="" alt="" />
+        <h2 class="images"></h2>
+        <p class="text"></p>
+      </div>
+
+      <div class="item">
+        <img src="" alt="" />
+        <h2 class="images"></h2>
+        <p class="text"></p>
+      </div>
+      <div class="item">
+        <img src="" alt="" />
+        <h2 class="images"></h2>
+        <p class="text"></p>
+      </div>
+    </main>
+
+    <div class="slideshow-container">
+      <h2>Views</h2>
+      <div class="text">
+        <p>
+          I shall always feel drawn to the sea. I dream of being able to step
+          outside my door and watch the crashing waves of the sea during a
+          storm.
+        </p>
+      </div>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/089/original/England-Coast-Path.jpg?1742737946"
+        class="images"
+        class="imageTwo"
+        alt="#"
+        style="width: 25%"
+      />
+
       <img
         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/088/original/pink-coast.jpg?1742737930"
         class="images"
@@ -100,91 +160,96 @@
       />
 
       <h2>Garden</h2>
+      <p>
+        The garden is full of herbs, vegetables, fruits, and colourful blooms.
+        There is a covered seating area where I can drink coffee when it is
+        raining.
+      </p>
       <img
         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/706/original/garden2.jpeg?1743330960"
         class="images"
         alt="#"
       />
+
+      <h2>Office</h2>
+      <p>My office is bright and modern. The chair at my desk is ergonomic.</p>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/091/original/office.jpg?1742737992"
+        class="images"
+        alt="An image of an office with a large window and overhead bookshelves."
+      />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/092/original/mint-office.jpg?1742738015"
+        class="images"
+        alt="An image of an office with a large window and bookshelves in a mint green."
+      />
+
+      <br />
+
+      <br />
+
+      <h2>Bedroom</h2>
+
+      <p>placeholder</p>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/712/original/bedroom4.jpeg?1743331407"
+        class="images"
+        alt="A bedroom with a big window. There's a cat laying on the floor at the foot of the bed."
+      />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/713/original/bedroom3.jpeg?1743331418"
+        class="images"
+        alt="A bedroom with a comfortable bed and a modern chandelier."
+      />
+      <br />
+
+      <h2>Kitchen</h2>
+      <p>placeholder</p>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/710/original/kitchen3.jpeg?1743331381"
+        class="images"
+        alt="#"
+      />
+
+      <br />
+
+      <h2>Sunroom</h2>
+      <p>placeholder</p>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/708/original/sunroom2.jpg?1743331365"
+        class="images"
+        alt="#"
+      />
+      <br />
+
+      <h2>Bathroom</h2>
+      <p>
+        One of my great pleasures in life is taking a bath by candlelight. My
+        dream home has a bathtub, heated floors, and a lot of plants. Don't
+        worry, the candles only burn while I'm in there.
+      </p>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/714/original/Bathroom.jpg?1743331920"
+        class="images"
+        alt="#"
+      />
+
+      <br />
+
+      <h2>Lounge</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/090/original/living-room.jpg?1742737973"
+        class="images"
+        alt="A lounge in muted tones with a large window and a set of double doors leading into the garden."
+      />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/707/original/lounge2.jpeg?1743331178"
+        class="images"
+        alt="A lounge in muted tones with a large window and a set of double doors leading into the garden. There are children's toys scattered around."
+      />
+
+      <p>placeholder</p>
     </div>
-
-    <h2>Office</h2>
-    <p>placeholder</p>
-    <img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/091/original/office.jpg?1742737992"
-      class="images"
-      alt="An image of an office with a large window and overhead bookshelves."
-    />
-    <img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/092/original/mint-office.jpg?1742738015"
-      class="images"
-      alt="An image of an office with a large window and bookshelves in a mint green."
-    />
-
-    <br />
-
-    <br />
-
-    <h2>Bedroom</h2>
-
-    <p>placeholder</p>
-    <img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/712/original/bedroom4.jpeg?1743331407"
-      class="images"
-      alt="A bedroom with a big window. There's a cat laying on the floor at the foot of the bed."
-    />
-    <img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/713/original/bedroom3.jpeg?1743331418"
-      class="images"
-      alt="A bedroom with a comfortable bed and a modern chandelier."
-    />
-    <br />
-
-    <h2>Kitchen</h2>
-    <p>placeholder</p>
-    <img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/710/original/kitchen3.jpeg?1743331381"
-      class="images"
-      alt="#"
-    />
-
-    <br />
-
-    <h2>Sunroom</h2>
-    <p>placeholder</p>
-    <img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/708/original/sunroom2.jpg?1743331365"
-      class="images"
-      alt="#"
-    /><img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/709/original/sunroom.jpg?1743331373"
-      class="images"
-      alt="#"
-    />
-    <br />
-
-    <h2>Bathroom</h2>
-    <p>placeholder</p>
-    <img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/714/original/Bathroom.jpg?1743331920"
-      class="images"
-      alt="#"
-    />
-
-    <br />
-
-    <h2>Lounge</h2>
-    <img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/090/original/living-room.jpg?1742737973"
-      class="images"
-      alt="A lounge in muted tones with a large window and a set of double doors leading into the garden."
-    />
-    <img
-      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/707/original/lounge2.jpeg?1743331178"
-      class="images"
-      alt="A lounge in muted tones with a large window and a set of double doors leading into the garden. There are children's toys scattered around."
-    />
-
-    <p>placeholder</p>
     <br />
 
     <footer>
