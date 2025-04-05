@@ -18,21 +18,46 @@
       }
 
       @media (max-width: 768px) {
+        .box {
+          max-width: 90%;
+          padding: 10px;
+        }
+
+        h1 {
+          font-size: 32px;
+        }
+
+        .strokeme {
+          font-size: 48px;
+        }
+
         main#carousel {
-          display: flex;
-          overflow-x: scroll;
-          scroll-snap-type: x mandatory;
-          scroll-behavior: smooth;
-          perspective: none;
           height: auto;
+          max-width: 100%;
         }
 
         .item {
-          flex: 0 0 90%;
-          scroll-snap-align: center;
-          position: relative;
+          width: 90vw;
+          padding: 10px;
           transform: none !important;
-          margin-right: 10px;
+          position: relative;
+          left: 0;
+          top: 0;
+          margin: 0 auto 20px;
+        }
+
+        .images {
+          width: 100%;
+          height: auto;
+        }
+
+        .carousel-arrows {
+          margin-top: 20px;
+        }
+
+        .item:hover {
+          transform: none;
+          box-shadow: none;
         }
       }
 
