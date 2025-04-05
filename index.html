@@ -85,7 +85,7 @@
       .carousel-arrows button {
         color: #92374d;
         background-color: #faf9da;
-        border: none;
+        border: 1px solid #8f374d;
         padding: 10px 20px;
         font-size: 24px;
         border-radius: 10px;
@@ -97,6 +97,7 @@
       .carousel-arrows button:hover {
         color: #faf9da;
         background-color: #92374d;
+        border: 2px solid #faf9da;
       }
 
       .item img {
@@ -134,11 +135,10 @@
         text-align: center;
         border: #eba6a9bf, solid 3px;
         padding: 20px;
-        border: 1px solid #1d546d;
         border-radius: 20px;
         transition: transform 0.3s ease-in-out;
         width: 300px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
       }
 
       div.item {
@@ -170,7 +170,7 @@
 
       .item:hover .images,
       .item.center-item:hover .images {
-        transform: scale(1.1);
+        transform: scale(1.5);
       }
       footer {
         text-align: center;
@@ -330,7 +330,7 @@
         <button id="next">→</button>
       </div>
     </div>
-
+    <br />
     <footer>
       This page was coded by Ashley Collins (<a
         href="https://github.com/BeeHexed"
@@ -387,9 +387,9 @@
           const img = item.querySelector("img");
           img.addEventListener("click", () => {
             if (i + 1 === position) {
-              shiftCarousel(1); // Move to next
+              shiftCarousel(1);
             } else {
-              shiftCarousel(-1); // Move to previous
+              shiftCarousel(-1);
             }
           });
         });
