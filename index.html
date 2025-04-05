@@ -11,18 +11,7 @@
     />
     <title>Dream Home</title>
     <style>
-      body {
-        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/162/276/original/watercolour.jpg?1743860676");
-        background-repeat: repeat;
-        background-size: 100%;
-      }
-
       @media (max-width: 768px) {
-        .box {
-          max-width: 90%;
-          padding: 10px;
-        }
-
         h1 {
           font-size: 32px;
         }
@@ -31,34 +20,58 @@
           font-size: 48px;
         }
 
+        .box {
+          max-width: 90%;
+          padding: 10px;
+        }
+
         main#carousel {
+          display: flex;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
           height: auto;
+          perspective: none;
           max-width: 100%;
         }
 
         .item {
-          width: 90vw;
-          padding: 10px;
+          flex: 0 0 85%;
+          scroll-snap-align: center;
+          position: relative !important;
           transform: none !important;
-          position: relative;
-          left: 0;
           top: 0;
-          margin: 0 auto 20px;
+          left: 0;
+          margin: 0 10px;
+          opacity: 1 !important;
+          z-index: 1 !important;
+          padding: 15px;
         }
 
         .images {
           width: 100%;
           height: auto;
+          object-fit: cover;
         }
 
         .carousel-arrows {
-          margin-top: 20px;
+          display: none;
         }
 
-        .item:hover {
+        .item:hover,
+        .item.center-item:hover,
+        .item:hover .images,
+        .item:hover .text {
           transform: none;
           box-shadow: none;
+          font-size: inherit;
         }
+      }
+
+      body {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/162/276/original/watercolour.jpg?1743860676");
+        background-repeat: repeat;
+        background-size: 100%;
       }
 
       h1 {
