@@ -13,7 +13,7 @@
     <style>
       body {
         background-color: #799eaf;
-        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/162/209/original/background1.png?1743774383");
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/162/276/original/watercolour.jpg?1743860676");
         background-repeat: repeat;
         background-size: 100%;
       }
@@ -41,11 +41,11 @@
       }
 
       .box {
-        background-color: #799eaf;
-        opacity: 90%;
-        max-width: 60%;
+        background-color: #6c9da1;
+        opacity: 95%;
+        max-width: 50%;
         margin: 0 auto;
-        padding: 10px;
+        padding: 5px;
         border-radius: 15px;
       }
 
@@ -66,13 +66,13 @@
         flex-direction: column;
         align-items: center;
         margin: 0 auto;
-        gap: 20px;
+        gap: 5px;
       }
 
       .carousel-arrows {
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 3px;
       }
 
       main#carousel {
@@ -86,8 +86,8 @@
       }
 
       .carousel-arrows button {
-        background-color: #92374d;
-        color: #faf9da;
+        color: #92374d;
+        background-color: #faf9da;
         border: none;
         padding: 10px 20px;
         font-size: 24px;
@@ -98,20 +98,20 @@
       }
 
       .carousel-arrows button:hover {
-        background-color: #faf9da;
-        color: #92374d;
+        color: #faf9da;
+        background-color: #92374d;
       }
 
       .item img {
         width: 100%;
-
         border-radius: 12px;
       }
 
       .text {
         margin-bottom: 2px;
         margin-top: 2px;
-        color: white;
+        color: #faf9da;
+        transition: transform 0.1s ease-in-out;
       }
 
       .images {
@@ -120,12 +120,18 @@
         object-fit: cover;
         border-radius: 15px;
         border: #eba6a9bf, solid 3px;
+        transition: transform 0.1s ease-in-out;
+      }
+
+      .text,
+      .images {
+        transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
       }
 
       .item {
         position: absolute;
         top: 50%;
-        left: 45%;
+        left: 50%;
         transform-style: preserve-3d;
         transform-origin: center center;
         text-align: center;
@@ -133,8 +139,7 @@
         padding: 20px;
         border: 1px solid #1d546d;
         border-radius: 20px;
-        background-color: rgb(121, 158, 175);
-        transition: transform 0.4s ease, z-index 0.4s ease;
+        transition: transform 0.3s ease-in-out;
         width: 300px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       }
@@ -142,21 +147,53 @@
       div.item {
         text-align: center;
         padding: 20px;
-        border: 1px solid #1d546d;
+        border: 1px solid #faf9da;
         border-radius: 20px;
         width: 20vw;
         height: auto;
-        background-color: rgba(121, 158, 175, 0.9);
+        background-color: rgba(146, 55, 77, 0.99);
         --r: calc(var(--position) - var(--offset));
         --abs: max(calc(var(--r) * -1), var(--r));
-        transition: all 0.25s linear;
+        transition: all 0.2s linear;
         transform: rotateY(calc(-10deg * var(--r)))
           translateX(calc(-60vw * var(--r)));
         z-index: calc((var(--position) - var(--abs)));
       }
 
+      .item:hover {
+        transform: scale(1.1);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .item:hover .text {
+        font-size: 18px;
+        transform: scale(1.1);
+      }
+
+      .item.center-item:hover {
+        transform: scale(1.1);
+      }
+
+      .item.center-item:hover .text {
+        font-size: 18px;
+        transform: scale(1.1);
+      }
+
+      .item.center-item:hover .images {
+        transform: scale(1.1);
+      }
       footer {
         text-align: center;
+        color: #92374d;
+      }
+
+      a {
+        color: #3d5f5e;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #6497ba;
       }
     </style>
   </head>
@@ -175,8 +212,7 @@
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/706/original/garden2.jpeg?1743330960"
             class="images"
-            class="imageTwo"
-            alt="#"
+            alt="A wooden table sitting in a garden. The sun is shining but there is an overhang to provide protection during rough weather."
           />
 
           <h2>Garden</h2>
@@ -186,19 +222,19 @@
             when it is raining.
           </p>
         </div>
+
         <div class="item">
           <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/706/original/garden2.jpeg?1743330960"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/162/271/original/library3.jpg?1743857836"
             class="images"
-            class="imageTwo"
-            alt="#"
+            alt="A library with several shelves of books. The furniture is bright."
           />
 
-          <h2>Garden</h2>
+          <h2>Library</h2>
           <p class="text">
-            The garden is full of herbs, vegetables, fruits, and colourful
-            blooms. There is a covered seating area where I can drink coffee
-            when it is raining.
+            Since I was a child, I've loved the written word. My dream home has
+            a library full of fiction and non-fiction books. There are multiple
+            lighting options.
           </p>
         </div>
 
@@ -218,20 +254,6 @@
 
         <div class="item">
           <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/712/original/bedroom4.jpeg?1743331407"
-            class="images"
-            alt="A bedroom with a big window. There's a cat laying on the floor at the foot of the bed."
-          />
-          <h2>Bedroom</h2>
-          <p class="text">
-            A cat watches the world go by from the foot of my queen size bed.
-            Though the windows are bright, there are curtains that make the room
-            dark and perfect for sleeping.
-          </p>
-        </div>
-
-        <div class="item">
-          <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/094/original/cottage.jpg?1742738033"
             alt="A cottage in the middle of the woods. It is peaceful. No neighbours are around."
             class="images"
@@ -246,16 +268,29 @@
 
         <div class="item">
           <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/712/original/bedroom4.jpeg?1743331407"
+            class="images"
+            alt="A bedroom with a big window. There's a cat laying on the floor at the foot of the bed."
+          />
+          <h2>Bedroom</h2>
+          <p class="text">
+            A cat watches the world go by from the foot of my queen size bed.
+            Though the windows are bright, there are curtains that make the room
+            dark and perfect for sleeping.
+          </p>
+        </div>
+
+        <div class="item">
+          <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/710/original/kitchen3.jpeg?1743331381"
             class="images"
-            alt="#"
+            alt="A bright kitchen with wooden cabinets. There is a bay window."
           />
           <h2>Kitchen</h2>
           <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-            dolorem quae quam ratione. Atque tempora officia at delectus.
-            Numquam nesciunt ipsam dicta aliquam veniam animi recusandae sunt
-            quis nulla facere.
+            Always a centre for activity, a functional and modern kitchen is
+            necessary for entertaining. Notice the door to the left that leads
+            outside.
           </p>
         </div>
 
@@ -263,14 +298,12 @@
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/708/original/sunroom2.jpg?1743331365"
             class="images"
-            alt="#"
+            alt="There is a lot of wicker furniture. The paint matches the lake visible outside the window."
           />
           <h2>Sunroom</h2>
           <p class="text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam
-            obcaecati laborum dolor eveniet non eligendi, consequuntur voluptate
-            enim voluptatem qui eos! Quasi, quam fugiat. Autem est fugiat a quas
-            dolorem.
+            With a view of the nearest waterway, the sunroom is a perfect place
+            to sit on warm, summer days.
           </p>
         </div>
 
@@ -278,7 +311,7 @@
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/714/original/Bathroom.jpg?1743331920"
             class="images"
-            alt="#"
+            alt="A clawfoot bathtub. Outside of the window the moon is full. Several candles are burning."
           />
           <h2>Bathroom</h2>
           <p class="text">
@@ -291,14 +324,13 @@
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/161/707/original/lounge2.jpeg?1743331178"
             class="images"
-            alt="#"
+            alt="A functional living room with childrens toys scattered around."
           />
           <h2>Living room</h2>
           <p class="text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam
-            obcaecati laborum dolor eveniet non eligendi, consequuntur voluptate
-            enim voluptatem qui eos! Quasi, quam fugiat. Autem est fugiat a quas
-            dolorem.
+            Out of all of the rooms, the living room with its scattered
+            children's toys, is the most lived-in room of the house. Fun,
+            family, and festivities happen daily in this space.
           </p>
         </div>
       </main>
@@ -314,7 +346,9 @@
         href="https://github.com/BeeHexed"
         target="_blank"
         >BeeHexed🐝</a
-      >).
+      >) is open sourced on
+      <a href="https://github.com/BeeHexed/dream-house-challenge">Github</a> and
+      hosted on <a href="https://dreamhouse-website.netlify.app/">Netlify</a>.
     </footer>
 
     <script>
@@ -329,6 +363,11 @@
           const centerOffset = offset > total / 2 ? offset - total : offset;
           const absOffset = Math.abs(centerOffset);
 
+          item.classList.remove("center-item");
+          if (absOffset === 0) {
+            item.classList.add("center-item");
+          }
+
           item.style.zIndex = 100 - absOffset;
           item.style.opacity = 1 - absOffset * 0.15;
           item.style.transform = `
@@ -337,7 +376,7 @@
         translateY(${absOffset * 30}px)
         scale(${1 - absOffset * 0.1})
       `;
-          if (absOffset > 2) {
+          if (absOffset > 3) {
             item.style.display = "none";
           } else {
             item.style.display = "block";
