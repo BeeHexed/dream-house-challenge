@@ -16,6 +16,26 @@
         background-repeat: repeat;
         background-size: 100%;
       }
+
+      @media (max-width: 768px) {
+        main#carousel {
+          display: flex;
+          overflow-x: scroll;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+          perspective: none;
+          height: auto;
+        }
+
+        .item {
+          flex: 0 0 90%;
+          scroll-snap-align: center;
+          position: relative;
+          transform: none !important;
+          margin-right: 10px;
+        }
+      }
+
       h1 {
         color: #92374d;
         text-align: center;
