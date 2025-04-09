@@ -11,63 +11,6 @@
     />
     <title>Dream Home</title>
     <style>
-      @media (max-width: 768px) {
-        h1 {
-          font-size: 32px;
-        }
-
-        .strokeme {
-          font-size: 48px;
-        }
-
-        .box {
-          max-width: 90%;
-          padding: 10px;
-        }
-
-        main#carousel {
-          display: flex;
-          overflow-x: auto;
-          scroll-snap-type: x mandatory;
-          scroll-behavior: smooth;
-          height: auto;
-          perspective: none;
-          max-width: 100%;
-        }
-
-        .item {
-          flex: 0 0 85%;
-          scroll-snap-align: center;
-          position: relative !important;
-          transform: none !important;
-          top: 0;
-          left: 0;
-          margin: 0 10px;
-          opacity: 1 !important;
-          z-index: 1 !important;
-          padding: 15px;
-        }
-
-        .images {
-          width: 100%;
-          height: auto;
-          object-fit: cover;
-        }
-
-        .carousel-arrows {
-          display: none;
-        }
-
-        .item:hover,
-        .item.center-item:hover,
-        .item:hover .images,
-        .item:hover .text {
-          transform: none;
-          box-shadow: none;
-          font-size: inherit;
-        }
-      }
-
       body {
         background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/162/276/original/watercolour.jpg?1743860676");
         background-repeat: repeat;
@@ -100,15 +43,13 @@
       .box {
         background-color: #6c9da1;
         opacity: 95%;
-        max-width: 50%;
-        margin: 0 auto;
+        max-width: 60%;
+        margin-inline: auto;
         padding: 5px;
         border-radius: 15px;
       }
 
       .exterior {
-        max-width: 500px;
-        max-height: 500px;
         border-radius: 70% 70% 53% 53%;
         display: flex;
         margin: 0 auto;
@@ -134,7 +75,7 @@
 
       main#carousel {
         width: 100%;
-        max-width: 1000px;
+        min-width: 50%;
         height: 400px;
         position: relative;
         perspective: 1000px;
